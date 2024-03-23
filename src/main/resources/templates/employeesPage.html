@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employees</title>
+</head>
+<body>
+<h1>List of Employees</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="Teachers : ${Teachers}">
+        <td th:text="${Teachers.id}"></td>
+        <td th:text="${Teachers.FIO}"></td>
+        <td th:text="${Teachers.s_mark}"></td>
+        <td th:text="${Teachers.s_rank}"></td>
+        <td th:text="${Teachers.rank}"></td>
+        <td th:text="${Teachers.disciplines}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
